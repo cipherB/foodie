@@ -1,0 +1,140 @@
+.menu {
+    background-color: rgba(0, 0, 0, 0.048);
+    border: 1px solid $color-primary;
+    padding: 2em;
+    display: flexbox;
+    margin-left: 2em;
+    max-width: 40rem;
+    margin-top: 3rem;
+    border-radius: 10%;
+    box-shadow: 10px 10px rgba(248, 248, 15, 0.384);
+
+
+    &_img {
+        height: 30vh;
+        width: 60vh;
+
+        @include respond(phone) {
+            height: 200px;
+            width: 150px;
+            margin-left: 2em;
+        }
+    }
+    
+    &_det {
+        margin-right: 2%;
+        padding: 1em;
+        background-color: $color-white;
+
+        @include respond(phone) {
+            margin-left: 12%;
+            margin-right: 0.5%;
+            padding: 1em;
+            background-color: $color-white;
+            max-height: 7rem;
+        }
+    }
+
+    &_name {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 200;
+        font-size: 1.5em;
+
+        @include respond(phone) {
+            font-size: 1.2em;
+        }
+    }
+
+    &_price {
+        font-size: 1.5em;
+
+        &_curr {
+            color: rgb(41, 148, 41);
+        }
+
+        @include respond(phone) {
+            font-size: 1em;
+        }
+    }
+
+    &_desc {
+        border: 1px double rgba(255, 0, 0, 0.308);
+    }
+
+    &_button {
+        margin-right: 2%;
+        padding: 1em;
+
+        &_sh {
+
+            :hover {
+                background-color: green;
+                color: $color-white;
+            }
+        }
+
+        &_show {
+            padding: 0.5em 5em;
+            background-color: transparent;
+            color: green;
+            border: 1px solid green;
+
+            @include respond(phone) {
+                padding: 1% 2em;
+                white-space: nowrap;
+            }
+        }
+
+        &_re {
+
+            :hover {
+                background-color: $color-secondary;
+                color: $color-white;
+            }
+        }
+
+        &_rem {
+            padding: 0.5em 5em;
+            background-color: transparent;
+            color: $color-secondary;
+            border: 1px solid $color-secondary;
+
+            @include respond(phone) {
+                padding: 1% 2em;
+                white-space: nowrap;
+            }
+        }
+
+        &_hi {
+
+            :hover {
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+
+        &_hide {
+            padding: 0.5em 5em;
+            background-color: transparent;
+            border: 1px solid $color-primary;
+
+            a {
+                text-decoration: none;
+                color: $color-primary;
+            }
+
+            @include respond(phone) {
+                padding: 0.5em 3em;
+            }
+
+        }
+    }
+
+    @include respond(phone) {
+        max-width: 20rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+}
+

@@ -1,0 +1,28 @@
+.grid {
+    display: flexbox;
+    margin-left: 2em;
+    max-width: 40rem;
+    margin-top: 3rem;
+
+    &_title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-secondary;
+    }
+
+    &_img {
+        height: 30vh;
+        width: 60vh;
+
+        @include respond(phone) {
+            height: 200px;
+            width: 150px;
+            margin-left: 5em;
+        }
+    }
+
+    &_text {
+        font-size: 1.2em;
+    }
+}

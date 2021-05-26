@@ -1,0 +1,27 @@
+.nav-color {
+    background: $transparent-black;
+    font-size: $default-font-size;
+
+    @include respond(phone) {
+        font-size: 1rem;
+
+        img {
+            height: 40;
+        }
+    }
+}
+.bline {
+    transition: 0.5s ease-in-out;
+
+    :hover {
+        font-size: larger;
+    }
+
+    :active {
+        color: $mild-color !important;
+    }
+
+    @include respond(phone) {
+        border-bottom: 1px double white;
+    }
+}

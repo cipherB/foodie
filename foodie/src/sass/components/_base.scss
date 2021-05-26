@@ -1,0 +1,23 @@
+.Base1 {
+    background-color: $color-secondary;
+    padding: 2rem 2rem;
+
+    @include respond(phone) {
+        padding: 1rem 1rem;
+    }
+}
+
+.Base2 {
+    background-color: $color-primary;
+    color: $color-secondary;
+    padding: 2.8rem 2.8rem;
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    @include respond(phone) {
+        padding: 1rem 1rem;
+    }
+}

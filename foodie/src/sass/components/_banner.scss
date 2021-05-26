@@ -1,0 +1,20 @@
+.banner {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $color-primary;
+    padding: 1%;
+
+    h1 {
+        text-transform: uppercase;
+        transition: 0.5s ease-in;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    #icon {
+        color: $color-secondary !important ;
+        font-size: 50px;
+    }
+}

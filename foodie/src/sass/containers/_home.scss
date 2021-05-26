@@ -1,0 +1,14 @@
+.cars {
+    height: 50% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+
+    img {
+        height: 400px;
+
+        @include respond(phone) {
+            height: 240px;
+        }
+    }
+
+}

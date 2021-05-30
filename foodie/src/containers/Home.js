@@ -40,6 +40,9 @@ const Home = () => {
     return (
         <div className="container-fluid" >
             <FancyButton />
+            <div class="home_text">
+                <p>We have lots of promotional events. So why not come over, order to benefit from them</p>
+            </div>
             <Banner title="Promo" />
             <div>
                 {
@@ -51,6 +54,9 @@ const Home = () => {
                         )
                     }))
                 }
+            </div>
+            <div class="home_text">
+                <p>Amazing Services and beautiful scenery to enhance your dining experiences</p>
             </div>
             <Banner title="pics" />
             <Carousel autoPlay={false} infiniteLoop='true' className="cars">

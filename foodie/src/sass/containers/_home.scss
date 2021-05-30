@@ -12,3 +12,17 @@
     }
 
 }
+
+.home_text {
+    display: flex;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3em;
+
+    @include respond(phone) {
+        font-size: 100%;
+    }
+}

@@ -8,7 +8,7 @@
     background: url(../../assets/thigh-3423122_1920.jpg);
 
     @include respond(phone) {
-        height: 50vh;
+        height: 100vh;
         background-size: 80vh;
     }
     

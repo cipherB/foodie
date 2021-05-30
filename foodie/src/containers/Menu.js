@@ -56,7 +56,7 @@ const Promo = () => {
                             return (
                                 <div >
                                     {(items.category === 1 ? (
-                                        <div>
+                                        <div  className="menu_bod">
                                         <Card product={items} />
                                     </div>
                                     ): null)}

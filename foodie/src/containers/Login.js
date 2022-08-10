@@ -26,50 +26,51 @@ const Login = ({ login, isAuthenticated }) => {
         return <Redirect to="/" />
     }
     return (
-        <div className='auth' >
+        <div>
             <Base title="Foodies - Login" />
-            <h1 className='auth_title' >Sign In</h1>
-            <p className='auth_lead' >Sign into your account</p>
-            <form className='auth_form' onSubmit={e => onSubmit(e)} >
-                <div className='auth_form_group' >
-                    <input 
-                        className='auth_form_input' 
-                        type='name' 
-                        placeholder='username' 
-                        name='username' 
-                        value={username} 
-                        onChange={e => onChange(e)} 
-                        required 
-                    />
-                </div>
-                <div className='auth_form_group' >
-                    <input 
-                        className='auth_form_input' 
-                        type='Email' 
-                        placeholder='email' 
-                        name='email' 
-                        value={email} 
-                        onChange={e => onChange(e)} 
-                        required 
-                    />
-                </div>
-                <div className='auth_form_group' >
-                    <input
-                        className='auth_form_input'
-                        type='password'
-                        placeholder='Password'
-                        name='password'
-                        value={password}
-                        onChange={e => onChange(e)}
-                        minLength='6'
-                    />
-                </div>
-                <p>{password} </p>
-                <button className='auth_form_button' >Login</button>
-            </form>
-            <p className='auth_authtext' >
-                Don't have an account? <Link className='auth_authtext_link' to='/signup'>Sign Up</Link>
-            </p>
+            <div className='auth'>
+                <h1 className='auth_title' >Sign In</h1>
+                <p className='auth_lead' >Sign into your account</p>
+                <form className='auth_form' onSubmit={e => onSubmit(e)} >
+                    <div className='auth_form_group' >
+                        <input 
+                            className='auth_form_input' 
+                            type='name' 
+                            placeholder='username' 
+                            name='username' 
+                            value={username} 
+                            onChange={e => onChange(e)} 
+                            required 
+                        />
+                    </div>
+                    <div className='auth_form_group' >
+                        <input 
+                            className='auth_form_input' 
+                            type='Email' 
+                            placeholder='email' 
+                            name='email' 
+                            value={email} 
+                            onChange={e => onChange(e)} 
+                            required 
+                        />
+                    </div>
+                    <div className='auth_form_group' >
+                        <input
+                            className='auth_form_input'
+                            type='password'
+                            placeholder='Password'
+                            name='password'
+                            value={password}
+                            onChange={e => onChange(e)}
+                            minLength='6'
+                        />
+                    </div>
+                    <button className='auth_form_button' >Login</button>
+                </form>
+                <p className='auth_authtext' >
+                    Don't have an account? <Link className='auth_authtext_link' to='/signup'>Sign Up</Link>
+                </p>
+            </div>
         </div>
     );
 };

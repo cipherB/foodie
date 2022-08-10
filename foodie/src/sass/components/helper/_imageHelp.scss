@@ -1,23 +1,20 @@
 .img-help {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0.5rem;
 
     img {
-        max-height: 30%;
-        max-width: 30%;
+        height: 420px;
+        width: 320px;
     }
 }
 
-.img-promo {
-    display: inline-flex;
-    justify-content: space-evenly;
-    align-items: center;
-    max-height: 40%;
-    max-width: 50%;
-
-    img {
-        max-height: 80%;
-        max-width: 80%;
-    }
+.promo-contain {
+    width: auto;
+    height: auto;
+    box-shadow: 1px 2px 5px $transparent-black, -1px 2px 5px $transparent-black;
 }
+
+// .img-promo {
+//     max-height: 40%;
+//     max-width: 50%;
+
+// }

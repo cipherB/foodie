@@ -1,9 +1,14 @@
 .nav-color {
-    background: $transparent-black;
+    background: $color-white;
+    color: $transparent-black;
+    box-shadow: 0 4px 10px $transparent-black;
+    width: 100%;
+    position: fixed;
     font-size: $default-font-size;
+    z-index: 10;
 
     @include respond(phone) {
-        font-size: 1rem;
+        font-size: 18px;
 
         img {
             height: 40;
@@ -11,10 +16,12 @@
     }
 }
 .bline {
-    transition: 0.5s ease-in-out;
+    transition: transform 1s ease;
+    cursor: pointer;
+    font-weight: 500;
 
     :hover {
-        font-size: larger;
+        transform: scale(1.2);
     }
 
     :active {

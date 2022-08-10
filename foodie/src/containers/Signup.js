@@ -32,60 +32,62 @@ const Signup = ({setAlert, signup, isAuthenticated}) => {
     };
 
     return (
-        <div className='auth' >
+        <div>
             <Base title="Foodies Registration" />
-            <h1 className='auth_title' >Sign Up</h1>
-            <p className='auth_lead' >Create your account</p>
-            <form className='auth_form' onSubmit={e => onSubmit(e)} >
-            <div className='auth_form_group' >
-                    <input 
-                        className='auth_form_input' 
-                        type='text' 
-                        placeholder='Username' 
-                        name='username' 
-                        value={username} 
-                        onChange={e => onChange(e)} 
-                        required 
-                    />
-                </div>
+            <div className='auth' >
+                <h1 className='auth_title' >Sign Up</h1>
+                <p className='auth_lead' >Create your account</p>
+                <form className='auth_form' onSubmit={e => onSubmit(e)} >
                 <div className='auth_form_group' >
-                    <input 
-                        className='auth_form_input' 
-                        type='email' 
-                        placeholder='Email' 
-                        name='email' 
-                        value={email} 
-                        onChange={e => onChange(e)} 
-                        required 
-                    />
-                </div>
-                <div className='auth_form_group' >
-                    <input
-                        className='auth_form_input'
-                        type='password'
-                        placeholder='Password'
-                        name='password1'
-                        value={password1}
-                        onChange={e => onChange(e)}
-                        minLength='6'
-                    />
-                </div>
-                <div className='auth_form_group' >
-                    <input
-                        className='auth_form_input'
-                        type='password'
-                        placeholder='Confirm Password'
-                        name='password2'
-                        value={password2}
-                        onChange={e => onChange(e)}
-                        minLength='6'
-                    />
-                </div>
-                <button className='auth_form_button' >Register</button>
-            </form>
-            <p className='auth_authtext' >
-                Already have an account? <Link className='auth_authtext_link' to='/login'>Sign In</Link>
-            </p>
+                        <input 
+                            className='auth_form_input' 
+                            type='text' 
+                            placeholder='Username' 
+                            name='username' 
+                            value={username} 
+                            onChange={e => onChange(e)} 
+                            required 
+                        />
+                    </div>
+                    <div className='auth_form_group' >
+                        <input 
+                            className='auth_form_input' 
+                            type='email' 
+                            placeholder='Email' 
+                            name='email' 
+                            value={email} 
+                            onChange={e => onChange(e)} 
+                            required 
+                        />
+                    </div>
+                    <div className='auth_form_group' >
+                        <input
+                            className='auth_form_input'
+                            type='password'
+                            placeholder='Password'
+                            name='password1'
+                            value={password1}
+                            onChange={e => onChange(e)}
+                            minLength='6'
+                        />
+                    </div>
+                    <div className='auth_form_group' >
+                        <input
+                            className='auth_form_input'
+                            type='password'
+                            placeholder='Confirm Password'
+                            name='password2'
+                            value={password2}
+                            onChange={e => onChange(e)}
+                            minLength='6'
+                        />
+                    </div>
+                    <button className='auth_form_button' >Register</button>
+                </form>
+                <p className='auth_authtext' >
+                    Already have an account? <Link className='auth_authtext_link' to='/login'>Sign In</Link>
+                </p>
+            </div>
         </div>
     )
 };

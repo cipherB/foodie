@@ -1,7 +1,7 @@
 export const SESSION_DURATION = 5*3600*1000;
 
 
-const proj = "build";
+const proj = "test";
 var app_call;
 
 if(proj === "test") {

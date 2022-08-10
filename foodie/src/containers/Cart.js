@@ -17,38 +17,42 @@ const Cart = () => {
 
     const loadAllProducts = (products) => {
         return(
-            <div>
-                {products.map((product, index) => (
-                    <Card 
-                        key={index}
-                        product={product}
-                        removeFromCart={true}
-                        addtoCart={false}
-                        reload={reload}
-                        setReload={setReload}
-                    />
-                ))}
+            <div className='container' >
+                <div className='row' >
+                    {products.map((product, index) => (
+                        <div  className="menu_bod col">
+                            <Card 
+                                key={index}
+                                product={product}
+                                removeFromCart={true}
+                                addtoCart={false}
+                                reload={reload}
+                                setReload={setReload}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
         )
     }
 
     return (
-        <div>
-            <Base title="Cart page" />
-            <div className="row text-center">
+        <div style={{overflowX:"hidden", position:'relative'}} >
+            <Base title="Cart" />
+            <div className="row text-center" style={{paddingBottom:"140px"}} >
                 <div>
                     <button className="bg-info p-3 menu_button_hide" ><a href="/menu" >Menu</a></button>
-                    {products.length > 0 ? (loadAllProducts(products)) : (
+                    {(products !== null) || (products.length > 0) ? (loadAllProducts(products)) : (
                     <h4 className="mx-3" >No products</h4>)}
                 </div>
             </div>
-            <div className="bg-dark text-light my-5 p-3">
+            <div className="bg-dark text-light mt-5 p-3 " style={{position:"absolute",bottom:0, width:"100%"}} >
                     {
                         cart.map((prices) => {
                             sum += prices.price;
                         })
                     }
-                    <p style={{marginRight: "10%", maxWidth:"5em", fontSize:"1.3em"}} >SumTotal: {sum} </p>
+                    <p style={{marginRight: "10%", width:"5em", fontSize:"1.3em"}} >SumTotal: {sum} </p>
                 </div>
         </div>
     )

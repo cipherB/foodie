@@ -27,12 +27,12 @@ const Vendors = () => {
     }, [])
 
     return (
-        <div className="container-fluid" >
-            <Base title="Vendors" />
+        <div>
+            <Base title="Vendors" subtitle="Get to know where to find our restaurants" />
             {
                 (vendors.map((vendor) => {
                     return (
-                        <div className="vendor" >
+                        <div className="vendor container" >
                             <img src={vendor.image} alt="vendor" className="vendor_img" />
                             <div className="vendor_det">
                                 <p className="vendor_name" >{vendor.name} </p>

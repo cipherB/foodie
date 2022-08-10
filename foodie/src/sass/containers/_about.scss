@@ -1,28 +1,46 @@
-.grid {
-    display: flexbox;
-    margin-left: 2em;
-    max-width: 40rem;
-    margin-top: 3rem;
+.about {
+    margin: 4rem;
+
+    @include respond(phone) {
+        margin: 2rem 0.6rem;
+    }
 
     &_title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $color-secondary;
+        color: $color-black;
+        font-size: 32px;
+        @include respond(phone) {
+            font-size: 28px;
+        }
+    }
+
+    &_img_contain {
+        @include respond(phone) {
+            width: 80vw;
+        }
     }
 
     &_img {
-        height: 30vh;
-        width: 60vh;
+        height: 60vh;
+        width: 90%;
+        border: 4px double $color-secondary;
+        border-radius: 40px;
 
         @include respond(phone) {
             height: 200px;
-            width: 150px;
-            margin-left: 5em;
+            width: 100%;
+            border-radius: 20px;
         }
     }
 
     &_text {
         font-size: 1.2em;
+        line-height: 32px;
+        color: $transparent-black;
+        margin-bottom: 4rem;
+        text-align: justify;
+
+        @include respond(phone) {
+            line-height: 28px;
+        }
     }
 }

@@ -4,24 +4,48 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 70vh;
+    gap: 2rem;
+    height: 100vh;
     background: url(../../assets/thigh-3423122_1920.jpg);
+    background-repeat: no-repeat;
 
     @include respond(phone) {
-        height: 100vh;
-        background-size: 80vh;
+        background-size: cover;
     }
     
 }
 
 .fancy-text {
-  color: rgba(255, 255, 255, 0.37);
-  font-size: 10vh;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 
-  @include respond(phone) {
-    font-size: 7vh;
-}
+  &-header {
+    color: rgba(255, 255, 255, 0.685);
+    font-size: 10vh;
+    text-align: center;
+    padding: 0 10rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    @include respond(phone) {
+      font-size: 7vh;
+      padding: 0 20px;
+    }
+  }
+
+  &-paragraph {
+    color: $color-white;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 20rem;
+
+    @include respond(phone) {
+      font-size: 18px;
+      padding: 0 20px;
+    }
+  }
+
 }
 
 .fancy-button {
@@ -43,16 +67,16 @@
   font-weight: bold;
   border-radius: 0;
   box-shadow: inset 0 0 0 var(--border-size) currentcolor;
-  transition: background .8s ease;
+  transition: background 2s ease;
 
   a {
     text-decoration: none;
-    color: $mild-color;
+    color: inherit;
   }
   
   &:hover {
     background: rgba(100, 0, 0, .07);
-    color: $color-white;
+    color: $color-white !important;
   }
   
   &__horizontal,

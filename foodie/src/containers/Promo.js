@@ -30,23 +30,22 @@ const Promo = () => {
     }, [])
 
     return (
-        <div class="container">
+        <div>
             <Base title="Promo" />
-            <div class="row">
-                {
-                    (promo && promo.map((items) => {
-                        return (
-                            <div >
-                                {(items.title === "Promo" ? (
-                                    <div class="col-md proms text-danger lead text-capitalize text-monospace">
-                                        <ImageHelper picture={items.image} classname="col-md rounded border border-danger img-promo" />
-                                        <p><strong>{items.description} </strong></p>
-                                    </div>
-                                ): null)}
-                            </div>
-                        )
-                    }))
-                }
+            <div class="container">
+                <div className="row">
+                    {
+                        (promo && promo.map((items, key) => (items.title === "Promo" ? (
+                                <div id={key} className="my-4 col" >
+                                        <div class="lead text-capitalize py-2 text-center promo-contain">
+                                            <ImageHelper picture={items.image} classname="rounded img-help d-flex justify-content-center" />
+                                            <p><strong>{items.description} </strong></p>
+                                        </div>
+                                </div>
+                            ): null)
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )
